@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">PDF export reports</title>
+  <desc id="desc">Downloadable report documents in PDF format.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8dfd8" />
+      <stop offset="100%" stop-color="#d9ebf9" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)" />
+  <rect x="132" y="60" width="180" height="238" rx="14" fill="#fff" opacity="0.96" />
+  <rect x="328" y="60" width="180" height="238" rx="14" fill="#fff" opacity="0.96" />
+  <rect x="160" y="96" width="124" height="24" rx="6" fill="#dc2626" />
+  <text x="198" y="114" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="700">PDF</text>
+  <rect x="160" y="136" width="124" height="14" rx="5" fill="#5f6c7b" opacity="0.4" />
+  <rect x="160" y="160" width="124" height="14" rx="5" fill="#5f6c7b" opacity="0.4" />
+  <rect x="356" y="96" width="124" height="24" rx="6" fill="#0b3b53" />
+  <rect x="356" y="136" width="124" height="14" rx="5" fill="#5f6c7b" opacity="0.4" />
+  <rect x="356" y="160" width="124" height="14" rx="5" fill="#5f6c7b" opacity="0.4" />
+  <path d="M320 260l-28-26h18v-34h20v34h18z" fill="#0ea5a1" />
+</svg>
