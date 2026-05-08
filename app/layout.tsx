@@ -3,6 +3,7 @@ import { Manrope, Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import SiteNav from "./components/site-nav";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = "G-FNCXXVFTPV";
@@ -72,13 +73,7 @@ export default function RootLayout({
                 className="brand-logo"
               />
             </Link>
-            <nav aria-label="Main navigation" className="main-nav">
-              <Link href="/">Home</Link>
-              <Link href="/features">Features</Link>
-              <Link href="/faq">FAQ</Link>
-              <Link href="/contact">Contact</Link>
-              <a href="#newsletter">Newsletter</a>
-            </nav>
+            <SiteNav />
           </div>
         </header>
 
@@ -87,10 +82,17 @@ export default function RootLayout({
         <footer className="site-footer">
           <div className="container footer-grid">
             <div>
-              <p className="footer-title">BoatRealm</p>
+              <Image
+                src="/Boatrealm-Logbook-Logo.svg"
+                alt="BoatRealm logo"
+                width={140}
+                height={42}
+                className="footer-logo"
+              />
               <p className="footer-text">
-                Building a clearer standard for boat records, one log at a time.
+              Building the most trusted platform in the boating industry.
               </p>
+              <p className="footer-text">A clearer standard for boat records, one log at a time.</p>
             </div>
             <div>
               <p className="footer-title">Navigate</p>

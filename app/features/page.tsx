@@ -56,7 +56,7 @@ const featureCards = [
     title: "Secure Document Vault",
     description:
       "Upload and keep important vessel documents such as insurance policy, registration, and survey reports.",
-    image: "/features/document-vault.svg",
+    image: "/features/boat-document-vault.svg",
     imageAlt: "Illustration of securely stored vessel documents",
   },
 ];

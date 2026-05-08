@@ -1,5 +1,6 @@
 import NewsletterForm from "./components/newsletter-form";
 import Reveal from "./components/reveal";
+import FeatureSlider from "./components/feature-slider";
 import Image from "next/image";
 
 export default function Home() {
@@ -99,6 +100,8 @@ export default function Home() {
         <div className="hero-panel">
           <p className="mini">Quick overview</p>
           <h2>A clear overview of your boat</h2>
+          
+          <Image src="/boatrealm-overview.png" alt="BoatRealm Maintenance Log book overview" width={600} height={400} style={{ width: "100%", height: "auto" }} />
           <p>
             See your latest service activity, total maintenance spend, and key
             vessel details at a glance.
@@ -119,7 +122,7 @@ export default function Home() {
                 type="video/mp4"
               />
             </video>
-            <p>
+            <p className="video-card-caption">
               Demo video: create a vessel profile, add maintenance events, and
               keep your service history organized from day one.
             </p>
@@ -181,6 +184,20 @@ export default function Home() {
             </ul>
           </div>
         </Reveal>
+      </section>
+
+      <section className="feature-slider-section">
+        <div className="feature-slider-head">
+          <Reveal>
+            <p className="eyebrow">App Screenshots</p>
+            <h2>Every feature built for real boat owners</h2>
+            <p>
+              From maintenance ledgers to PDF exports — everything you need to
+              protect your vessel&apos;s history and value.
+            </p>
+          </Reveal>
+        </div>
+        <FeatureSlider />
       </section>
 
       <section className="container section-block">
