@@ -1,5 +1,6 @@
 import NewsletterForm from "./components/newsletter-form";
 import Reveal from "./components/reveal";
+import Image from "next/image";
 
 export default function Home() {
   const schema = {
@@ -211,7 +212,17 @@ export default function Home() {
               <span>Jordan P., Fleet Operator</span>
             </article>
           </div>
-          <p className="rating">Average early-user rating: 4.9/5</p>
+          <div className="rating-wrap">
+             <p className="rating">Average early-user rating: 4.9/5</p>
+             <Image
+              src="/user-rating-stars.svg"
+              alt="User rating stars showing 4.9 out of 5"
+              width={280}
+              height={48}
+              className="rating-stars"
+            />
+           
+          </div>
         </Reveal>
       </section>
 

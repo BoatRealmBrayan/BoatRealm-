@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Manrope, Montserrat } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-FNCXXVFTPV";
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -55,13 +58,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${fraunces.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${montserrat.variable}`}>
       <body>
         <header className="site-header">
           <div className="container header-inner">
             <Link href="/" className="brand">
-              BoatRealm
-              <span>Maintenance Log Book</span>
+              <Image
+                src="/Boatrealm-Logo.svg"
+                alt="BoatRealm logo"
+                width={160}
+                height={48}
+                priority
+                className="brand-logo"
+              />
             </Link>
             <nav aria-label="Main navigation" className="main-nav">
               <Link href="/">Home</Link>
@@ -122,6 +131,18 @@ export default function RootLayout({
           src="https://platform-api.sharethis.com/js/sharethis.js#property=69fbd42c64241bce3a6cb001&product=sop"
           strategy="afterInteractive"
         />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );

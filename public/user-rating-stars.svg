@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="48" viewBox="0 0 280 48" role="img" aria-labelledby="title desc">
+  <title id="title">User rating stars</title>
+  <desc id="desc">Five gold stars representing an average user rating of 4.9 out of 5.</desc>
+  <defs>
+    <symbol id="star" viewBox="0 0 24 24">
+      <path d="M12 1.9l3.09 6.26 6.91 1-5 4.88 1.18 6.88L12 17.68 5.82 20.92 7 14.04 2 9.16l6.91-1L12 1.9z" />
+    </symbol>
+  </defs>
+  <rect width="280" height="48" rx="12" fill="#f7f8f4" />
+  <g transform="translate(20 12)" fill="#f59e0b">
+    <use href="#star" x="0" y="0" width="24" height="24" />
+    <use href="#star" x="36" y="0" width="24" height="24" />
+    <use href="#star" x="72" y="0" width="24" height="24" />
+    <use href="#star" x="108" y="0" width="24" height="24" />
+    <use href="#star" x="144" y="0" width="24" height="24" />
+  </g>
+  <text x="198" y="31" fill="#1a5f69" font-family="Arial, sans-serif" font-size="16" font-weight="700">4.9/5</text>
+</svg>
