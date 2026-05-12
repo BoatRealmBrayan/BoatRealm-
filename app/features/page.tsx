@@ -11,6 +11,13 @@ const featureCards = [
     imageAlt: "Illustration of a boat profile with engine and generator details",
   },
   {
+    title: "Receipt Auto Analyzer",
+    description:
+      "Upload, scan and auto categorize spending receipts and invoices in a snap.",
+    image: "/features/Receipt-auto-analyser.svg",
+    imageAlt: "Illustration of auto-scanned and categorized receipts and invoices",
+  },
+  {
     title: "Maintenance and Repair Ledger",
     description:
       "Track every entry in a clear ledger and filter by category: Expenses, Maintenance, and Upgrades.",
@@ -23,28 +30,7 @@ const featureCards = [
       "Review monthly spending totals to quickly understand how much your vessel care is costing over time.",
     image: "/features/monthly-spending.svg",
     imageAlt: "Illustration of a monthly spending bar chart",
-  },
-  {
-    title: "Top Vendor by Spending",
-    description:
-      "Identify the vendor receiving the highest spend so you can negotiate better and optimize maintenance budgets.",
-    image: "/features/top-vendor.svg",
-    imageAlt: "Illustration of vendor ranking with top spending highlighted",
-  },
-  {
-    title: "Most Replaced Parts",
-    description:
-      "Spot frequently replaced parts to anticipate recurring costs and plan inventory before peak season.",
-    image: "/features/replaced-parts.svg",
-    imageAlt: "Illustration of common replacement parts and frequency",
-  },
-  {
-    title: "Maintenance Schedule and Reminders",
-    description:
-      "Schedule upcoming maintenance tasks and get reminders so critical service windows are never missed.",
-    image: "/features/schedule-reminders.svg",
-    imageAlt: "Illustration of a maintenance calendar with reminder alerts",
-  },
+  },  
   {
     title: "PDF Export and Download",
     description:
@@ -76,7 +62,7 @@ const featuresSchema = {
       name: "BoatRealm Features Overview",
       description:
         "A quick walkthrough of the BoatRealm app benefits and key features for owners and fleet operators.",
-      embedUrl: "https://www.w3schools.com/html/movie.mp4",
+      embedUrl: "https://boatrealm.com/content/boatrealm-logbook-features.mp4",
       uploadDate: "2026-05-06",
     },
   ],
@@ -106,19 +92,37 @@ export default function FeaturesPage() {
       <section className="container section-block">
         <Reveal>
           <article className="card feature-summary">
-            <h2>Feature summary</h2>
-            <p>
-              From engine details and service providers to monthly spending and
-              document exports, BoatRealm helps you stay audit-ready,
-              maintenance-ready, and resale-ready.
-            </p>
-            <ul className="feature-list">
-              <li>Single profile for vessel, generator, engines, and providers</li>
-              <li>Maintenance and repair ledger with category filtering</li>
-              <li>Spending analysis by month, vendor, and part replacement</li>
-              <li>Scheduled maintenance reminders and PDF-ready reporting</li>
-              <li>Secure upload for insurance and registration documents</li>
-            </ul>
+            <div className="feature-summary-grid">
+              <div>
+                <p className="eyebrow">Video Walkthrough</p>
+                <h2>Feature summary</h2>
+                <p>
+                  From engine details and service providers to monthly spending and
+                  document exports, BoatRealm helps you stay audit-ready,
+                  maintenance-ready, and resale-ready.
+                </p>
+                <ul className="feature-list">
+                  <li>Single profile for vessel, generator, engines, and providers</li>
+                  <li>Maintenance and repair ledger with category filtering</li>
+                  <li>Spending analysis by month, vendor, and part replacement</li>
+                  <li>Scheduled maintenance reminders and PDF-ready reporting</li>
+                  <li>Secure upload for insurance and registration documents</li>
+                </ul>
+              </div>
+              <div className="feature-summary-video">
+                <video controls playsInline preload="metadata" className="video">
+                  <source
+                    src="/content/boatrealm-logbook-features.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <p className="video-card-caption">
+                  In this overview, you can see how BoatRealm organizes service
+                  records, tracks spend trends, and keeps your vessel documents easy
+                  to access.
+                </p>
+              </div>
+            </div>
           </article>
         </Reveal>
       </section>
@@ -126,34 +130,12 @@ export default function FeaturesPage() {
       <section className="container section-block">
         <Reveal>
           <div className="section-head">
-            <p className="eyebrow">Video Walkthrough</p>
-            <h2>See the full feature experience</h2>
-          </div>
-          <div className="video-card">
-            <video controls playsInline preload="metadata" className="video">
-              <source
-                src="https://www.w3schools.com/html/movie.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <p>
-              In this overview, you can see how BoatRealm organizes service
-              records, tracks spend trends, and keeps your vessel documents easy
-              to access.
-            </p>
-          </div>
-        </Reveal>
-      </section>
-
-      <section className="container section-block">
-        <Reveal>
-          <div className="section-head">
             <p className="eyebrow">Detailed Features</p>
-            <h2>One card per feature, built for daily use</h2>
+            <h2>Manage your fleet's expenses with tools designed for real boat owners, built for daily use</h2>
           </div>
         </Reveal>
         <div className="feature-cards-grid">
-          {featureCards.map((feature) => (
+          {featureCards.map((feature, index) => (
             <Reveal key={feature.title}>
               <article className="card feature-card">
                 <div className="feature-image-wrap">
@@ -162,6 +144,7 @@ export default function FeaturesPage() {
                     alt={feature.imageAlt}
                     width={640}
                     height={360}
+                    loading={index === 0 ? "eager" : "lazy"}
                     className="feature-image"
                   />
                 </div>

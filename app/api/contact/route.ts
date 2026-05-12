@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendContactEmail } from "@/app/lib/brevo";
 
 type ContactBody = {
   name?: string;
@@ -42,6 +43,20 @@ export async function POST(request: Request) {
       return NextResponse.json(
         { message: "Message must be between 10 and 2000 characters." },
         { status: 400 }
+      );
+    }
+
+    const result = await sendContactEmail({
+      name,
+      email,
+      company,
+      message,
+    });
+
+    if (!result.ok) {
+      return NextResponse.json(
+        { message: "Unable to send your message right now. Please try again." },
+        { status: 503 }
       );
     }
 

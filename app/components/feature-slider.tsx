@@ -39,19 +39,9 @@ const slides = [
     alt: "Detailed spending breakdown by category",
   },
   {
-    title: "Top Vendor Tracking",
-    image: "/features/top-vendor.svg",
-    alt: "Top vendor by spending highlighted",
-  },
-  {
-    title: "Most Replaced Parts",
-    image: "/features/replaced-parts.svg",
-    alt: "Common replacement parts and frequency",
-  },
-  {
-    title: "Maintenance Schedule",
-    image: "/features/schedule-reminders.svg",
-    alt: "Maintenance calendar with reminder alerts",
+    title: "Receipt Auto Analyzer",
+    image: "/features/Receipt-auto-analyser.svg",
+    alt: "Receipts and invoices auto scanned and categorized",
   },
   {
     title: "PDF Export",
@@ -83,7 +73,7 @@ export default function FeatureSlider() {
       }}
       className="feature-swiper"
     >
-      {slides.map((slide) => (
+      {slides.map((slide, index) => (
         <SwiperSlide key={slide.title} className="feature-swiper-slide">
           <div className="feature-slide-img-wrap">
             <Image
@@ -91,6 +81,7 @@ export default function FeatureSlider() {
               alt={slide.alt}
               width={380}
               height={260}
+              loading={index === 0 ? "eager" : "lazy"}
               className="feature-slide-img"
             />
           </div>

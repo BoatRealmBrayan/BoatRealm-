@@ -20,6 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Brevo Integration
+
+The newsletter and contact form endpoints are wired to Brevo.
+
+1. Copy `.env.example` to `.env.local`.
+2. Set these variables:
+
+```bash
+BREVO_API_KEY=your_brevo_api_key
+BREVO_NEWSLETTER_LIST_ID=your_numeric_list_id
+BREVO_CONTACT_TO_EMAIL=your_inbox@example.com
+BREVO_SENDER_EMAIL=verified_sender@example.com
+BREVO_SENDER_NAME=BoatRealm Website
+```
+
+### Endpoint behavior
+
+- `POST /api/newsletter`: validates email, then creates or updates a Brevo contact in `BREVO_NEWSLETTER_LIST_ID`.
+- `POST /api/contact`: validates form fields, then sends a transactional email to `BREVO_CONTACT_TO_EMAIL` via Brevo SMTP API.
+
+If required Brevo environment variables are missing or Brevo is unavailable, both endpoints return `503`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

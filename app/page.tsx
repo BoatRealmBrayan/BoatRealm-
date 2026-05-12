@@ -56,7 +56,7 @@ export default function Home() {
         name: "BoatRealm Product Demo",
         description:
           "A short walkthrough showing how to create a vessel profile and log maintenance in BoatRealm.",
-        embedUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+        embedUrl: "https://boatrealm.com/content/boatrealm-logbook-overview.mp4",
         uploadDate: "2026-05-05",
         publisher: { "@id": "https://boatrealm.com/#organization" },
       },
@@ -65,7 +65,7 @@ export default function Home() {
         name: "Benefits and Features Overview",
         description:
           "See how BoatRealm helps owners protect boat value with organized records and expense insights.",
-        embedUrl: "https://www.w3schools.com/html/movie.mp4",
+        embedUrl: "https://boatrealm.com/content/boatrealm-logbook-features.mp4",
         uploadDate: "2026-05-05",
         publisher: { "@id": "https://boatrealm.com/#organization" },
       },
@@ -101,7 +101,7 @@ export default function Home() {
           <p className="mini">Quick overview</p>
           <h2>A clear overview of your boat</h2>
           
-          <Image src="/boatrealm-overview.png" alt="BoatRealm Maintenance Log book overview" width={600} height={400} style={{ width: "100%", height: "auto" }} />
+          <Image src="/boatrealm-overview.png" alt="BoatRealm Maintenance Log book overview" width={600} height={400} style={{ width: "100%", height: "auto" }} loading="eager" />
           <p>
             See your latest service activity, total maintenance spend, and key
             vessel details at a glance.
@@ -118,7 +118,7 @@ export default function Home() {
           <div className="video-card">
             <video controls playsInline preload="metadata" className="video">
               <source
-                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                src="/content/boatrealm-logbook-overview.mp4"
                 type="video/mp4"
               />
             </video>
@@ -169,14 +169,15 @@ export default function Home() {
             <h2>Purpose-built for real boat owners</h2>
           </div>
           <div className="video-card alt">
-            <video controls playsInline preload="metadata" className="video">
+            <video controls playsInline preload="metadata" className="video-features">
               <source
-                src="https://www.w3schools.com/html/movie.mp4"
+                src="/content/boatrealm-logbook-features.mp4"
                 type="video/mp4"
               />
             </video>
             <ul className="feature-list">
               <li>Add vessel information in minutes</li>
+              <li>Upload, scan and auto categorize spending receipts and invoices in a snap</li>
               <li>Track maintenance by category and date</li>
               <li>Organize vendor invoices and uploaded documents</li>
               <li>Review monthly expenses and spending trends</li>
@@ -188,8 +189,7 @@ export default function Home() {
 
       <section className="feature-slider-section">
         <div className="feature-slider-head">
-          <Reveal>
-            <p className="eyebrow">App Screenshots</p>
+          <Reveal>           
             <h2>Every feature built for real boat owners</h2>
             <p>
               From maintenance ledgers to PDF exports — everything you need to
