@@ -163,6 +163,7 @@ a {
   overflow-y: auto;
   padding: 1.5rem 1.5rem 3rem;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+  height: 390px;
 }
 
 .mobile-menu.is-open {
@@ -172,7 +173,7 @@ a {
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.25rem;  
 }
 
 .mobile-nav a {
@@ -359,7 +360,7 @@ a {
   border: 1px solid rgba(185, 192, 207, 0.55);
   display: block;
 }
-.video-features{max-height: 450px;}
+.video-features{max-height: 500px;}
 .video-card-caption {
   margin-top: 0.5rem;
   color: #4b6284;

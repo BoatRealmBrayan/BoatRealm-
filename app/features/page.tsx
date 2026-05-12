@@ -94,23 +94,22 @@ export default function FeaturesPage() {
           <article className="card feature-summary">
             <div className="feature-summary-grid">
               <div>
-                <p className="eyebrow">Video Walkthrough</p>
+                <p className="eyebrow">Video Walkthrough: Smart Boat Maintenance Logbook Features</p>
                 <h2>Feature summary</h2>
                 <p>
-                  From engine details and service providers to monthly spending and
-                  document exports, BoatRealm helps you stay audit-ready,
-                  maintenance-ready, and resale-ready.
+                  Stay organized, audit-ready, and resale-ready with BoatRealm — the intelligent boat maintenance logbook and vessel management web app. Track engine hours, service records, expenses, and documents in one secure profile for your boat, generator, engines, and service providers. Perfect for boat owners who want professional-level maintenance tracking without the hassle.
                 </p>
                 <ul className="feature-list">
-                  <li>Single profile for vessel, generator, engines, and providers</li>
-                  <li>Maintenance and repair ledger with category filtering</li>
-                  <li>Spending analysis by month, vendor, and part replacement</li>
-                  <li>Scheduled maintenance reminders and PDF-ready reporting</li>
-                  <li>Secure upload for insurance and registration documents</li>
+                  <li><strong>All-in-One Vessel Profile:</strong> Centralized digital logbook for your boat, generator, engines, tenders, and key service providers</li>
+                  <li><strong>AI-native expense management:</strong> Upload, scan and auto categorize spending receipts and invoices in a snap</li>
+                  <li><strong>Comprehensive Maintenance & Repair Ledger:</strong> Full service history tracker with powerful category filtering and searchable records</li>
+                  <li><strong>Spending Insights & Analysis:</strong> Detailed reports by month, vendor, part replacement, and total cost of ownership</li>
+                  <li><strong>PDF Export and Download:</strong> Generate and download vessel information and service-record reports in PDF for surveys, insurance, and resale.</li>
+                  <li><strong>Secure Document Storage:</strong> Upload and store insurance and registration documents safely</li>
                 </ul>
               </div>
               <div className="feature-summary-video">
-                <video controls playsInline preload="metadata" className="video">
+                <video controls playsInline preload="metadata" className="video-features">
                   <source
                     src="/content/boatrealm-logbook-features.mp4"
                     type="video/mp4"

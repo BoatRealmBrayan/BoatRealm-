@@ -8,7 +8,6 @@ const links = [
   { href: "/features", label: "Features" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
-  { href: "#newsletter", label: "Newsletter", scroll: true },
 ];
 
 export default function SiteNav() {

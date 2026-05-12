@@ -116,15 +116,18 @@ export default function Home() {
             <h2>See the log book workflow in action</h2>
           </div>
           <div className="video-card">
-            <video controls playsInline preload="metadata" className="video">
-              <source
-                src="/content/boatrealm-logbook-overview.mp4"
-                type="video/mp4"
-              />
-            </video>
+            <iframe
+              width="347"
+              height="616"
+              src="https://www.youtube.com/embed/0qZMfeify5o?rel=0"
+              title="From scattered receipts to organized records in under a minute."              
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="video"              
+            />
             <p className="video-card-caption">
-              Demo video: create a vessel profile, add maintenance events, and
-              keep your service history organized from day one.
+              From scattered receipts to organized records in under a minute.
             </p>
           </div>
         </Reveal>

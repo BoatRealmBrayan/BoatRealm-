@@ -84,7 +84,7 @@ export default function RootLayout({
           <div className="container footer-grid">
             <div>
               <Image
-                src="/Boatrealm-Logbook-Logo.svg"
+                src="/Boatrealm-Logo.svg"
                 alt="BoatRealm logo"
                 width={140}
                 height={42}
