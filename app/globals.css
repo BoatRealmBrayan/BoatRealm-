@@ -26,7 +26,9 @@ body {
   font-family: var(--font-manrope), sans-serif;
   line-height: 1.55;
 }
-
+h1, h2, h3, h4, h5, h6 {    
+    text-transform: capitalize;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -242,7 +244,7 @@ a {
 .hero-copy h1 {
   margin: 0.4rem 0 0.85rem;
   font-family: var(--font-fraunces), serif;
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
   line-height: 1.02;
 }
 
@@ -882,7 +884,7 @@ button:disabled {
   width: 100%;
   height: auto;
   object-fit: contain;
-  max-height: 320px;
+  max-height: 370px;
   display: block;
 }
 
