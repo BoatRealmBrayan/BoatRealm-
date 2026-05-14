@@ -371,12 +371,17 @@ a {
   padding:5px;  
 }
 .story-grid,
-.testimonial-grid,
 .faq-grid {
   margin-top: 1rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.testimonial-grid{
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .card {

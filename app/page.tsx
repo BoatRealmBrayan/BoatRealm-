@@ -212,24 +212,38 @@ export default function Home() {
           <div className="testimonial-grid">
             <article className="card quote">
               <p>
-                BoatRealm gave me one place for receipts, engine service, and
-                print service records. It removed the guesswork.
+                I usually avoid management platforms because I run a smaller operation, and most of them take 
+                too much time to keep up with. With BoatRealm, I can just scan an invoice or receipt, 
+                and it automatically logs and categorizes it for me. It saves me time and keeps everything organized 
+                without making it complicated.
               </p>
-              <span>Captain Luis R., 42ft Cruiser</span>
+              <span>Captain Jay</span>
             </article>
             <article className="card quote">
               <p>
-                I can now show buyers a clean maintenance story instead of a
-                folder of random PDFs.
+                I use BoatRealm to manage records for my charter fleet. I currently have three vessels on the platform, 
+                and it has made it much easier to keep everything organized. When an owner asks for updates or records, 
+                I can send them a full monthly PDF report with the invoices attached. It looks professional and saves me from having to dig through folders or emails.
               </p>
-              <span>Sophia M., Marina Owner</span>
+              <span>Fabian, Yacht Manager</span>
             </article>
             <article className="card quote">
               <p>
-                The expense insights helped us see exactly where we were
-                overspending across our two boats.
+                I recently bought my first boat, and I did a lot of research before making the purchase. 
+                People always say the happiest days of owning a boat are the day you buy it and the day you sell it, 
+                but I actually want to know what I’m putting into mine along the way. Whether it’s a battery replacement 
+                or the first 100-hour service, BoatRealm helps me stay on top of everything and see what I’ve spent.
               </p>
-              <span>Jordan P., Fleet Operator</span>
+              <span>Dario, Boat Owner</span>
+            </article>
+            <article className="card quote">
+              <p>
+                Keeping organized boat records is not as common as it should be. Before BoatRealm, buyers would ask me 
+                for service records, and maybe two out of ten owners actually had them organized. BoatRealm helps me 
+                keep records ready for my listings, which makes the selling process smoother. I’ve also seen sellers 
+                have stronger negotiations when they can show a clean, organized service history.
+              </p>
+              <span>Joel, Yacht Broker</span>
             </article>
           </div>
           <div className="rating-wrap">
