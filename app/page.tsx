@@ -27,7 +27,7 @@ export default function Home() {
       {
         "@type": "SoftwareApplication",
         "@id": "https://boatrealm.com/#app",
-        name: "BoatRealm Maintenance Log Book",
+        name: "BoatRealm Smart Maintenance LogBook",
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
         offers: {
@@ -76,7 +76,7 @@ export default function Home() {
     <div className="page-shell">
       <section className="hero container">
         <div className="hero-copy">
-          <p className="eyebrow">BoatRealm Maintenance Log Book</p>
+          <p className="eyebrow">BoatRealm Maintenance Logbook</p>
           <h1>Keep every boat record clear, searchable, and ready.</h1>
           <p>
             Built from a simple truth seen across the industry: too many boats
@@ -101,7 +101,7 @@ export default function Home() {
           <p className="mini">Quick overview</p>
           <h2>A clear overview of your boat</h2>
           
-          <Image src="/boatrealm-overview.png" alt="BoatRealm Maintenance Log book overview" width={600} height={400} style={{ width: "100%", height: "auto" }} loading="eager" />
+          <Image src="/boatrealm-logbook-overview.png" alt="BoatRealm Smart Maintenance Log book overview" width={600} height={400} style={{ width: "100%", height: "auto" }} loading="eager" />
           <p>
             See your latest service activity, total maintenance spend, and key
             vessel details at a glance.
@@ -113,7 +113,7 @@ export default function Home() {
         <Reveal>
           <div className="section-head">
             <p className="eyebrow">Product Demo</p>
-            <h2>See the log book workflow in action</h2>
+            <h2>See the logbook workflow in action</h2>
           </div>
           <div className="video-card">
             <iframe
@@ -213,7 +213,7 @@ export default function Home() {
             <article className="card quote">
               <p>
                 BoatRealm gave me one place for receipts, engine service, and
-                recurring reminders. It removed the guesswork.
+                print service records. It removed the guesswork.
               </p>
               <span>Captain Luis R., 42ft Cruiser</span>
             </article>
