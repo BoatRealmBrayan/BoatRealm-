@@ -4,9 +4,11 @@ import { subscribeNewsletterEmail } from "@/app/lib/brevo";
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: Request) {
+  let email: string | undefined;
+
   try {
     const body = (await request.json()) as { email?: string };
-    const email = body.email?.trim().toLowerCase();
+    email = body.email?.trim().toLowerCase();
 
     if (!email || !EMAIL_REGEX.test(email)) {
       return NextResponse.json(
@@ -14,10 +16,22 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+  } catch {
+    return NextResponse.json(
+      { message: "Invalid request payload." },
+      { status: 400 }
+    );
+  }
 
+  try {
     const result = await subscribeNewsletterEmail(email);
 
     if (!result.ok) {
+      console.error("Newsletter subscription failed", {
+        message: result.message,
+        missing: result.missing,
+      });
+
       return NextResponse.json(
         { message: "Unable to subscribe right now. Please try again shortly." },
         { status: 503 }
@@ -33,8 +47,8 @@ export async function POST(request: Request) {
     );
   } catch {
     return NextResponse.json(
-      { message: "Invalid request payload." },
-      { status: 400 }
+      { message: "Unable to subscribe right now. Please try again shortly." },
+      { status: 503 }
     );
   }
 }
